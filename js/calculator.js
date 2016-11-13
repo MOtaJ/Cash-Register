@@ -1,10 +1,7 @@
 
 function calculatorModule(x) {
-  let memory = 0;
-  let total = 0;
-  let calculator = {
-    add: add,
-  }
+  var memory = 0;
+  var total = 0;
 
     function load(x) {
     total = x;
@@ -47,6 +44,6 @@ function calculatorModule(x) {
    };
 }
 
-var myCalc = calculatorModule();
+
 
 console.log(calculatorModule);
