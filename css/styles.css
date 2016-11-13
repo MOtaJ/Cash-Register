@@ -1,0 +1,23 @@
+
+
+table {
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+}
+
+#numeric {
+  text-align: center;
+  width: px;
+}
+
+#Display {
+  border: 2px solid black;
+  width: 200px;
+  height: 10px;
+  text-decoration: underline;
+}
+
+form {
+  float: left;
+}
