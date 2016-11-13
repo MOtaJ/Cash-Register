@@ -59,6 +59,10 @@ document.getElementById("addbtn").addEventListener('click', function(){
   document.getElementById("display").innerHTML += '+';
  }); 
 
+document.getElementById("btndec").addEventListener('click', function(){
+  document.getElementById("display").innerHTML += '.';
+ }); 
+
  /* var display = document.getElementById('display');
 
  var btn2 = document.getElementById('btn2');
