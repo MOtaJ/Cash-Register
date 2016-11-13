@@ -43,6 +43,10 @@ var calculator = calculatorModule();
   document.getElementById("display").innerHTML += 0;
  }); 
 
+ document.getElementById("btn00").addEventListener('click', function(){
+  document.getElementById("display").innerHTML += '00';
+ }); 
+
 document.getElementById("divisionbtn").addEventListener('click', function(){
   document.getElementById("display").innerHTML += '÷';
  }); 
@@ -61,6 +65,10 @@ document.getElementById("addbtn").addEventListener('click', function(){
 
 document.getElementById("btndec").addEventListener('click', function(){
   document.getElementById("display").innerHTML += '.';
+ }); 
+
+document.getElementById("clear").addEventListener('click', function(){
+  document.getElementById("display").innerHTML = '';
  }); 
 
  /* var display = document.getElementById('display');
