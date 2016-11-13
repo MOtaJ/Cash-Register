@@ -43,6 +43,22 @@ var calculator = calculatorModule();
   document.getElementById("display").innerHTML += 0;
  }); 
 
+document.getElementById("divisionbtn").addEventListener('click', function(){
+  document.getElementById("display").innerHTML += '÷';
+ }); 
+
+document.getElementById("multiplybtn").addEventListener('click', function(){
+  document.getElementById("display").innerHTML += '*';
+ }); 
+
+document.getElementById("subtractbtn").addEventListener('click', function(){
+  document.getElementById("display").innerHTML += '-';
+ }); 
+
+document.getElementById("addbtn").addEventListener('click', function(){
+  document.getElementById("display").innerHTML += '+';
+ }); 
+
  /* var display = document.getElementById('display');
 
  var btn2 = document.getElementById('btn2');
