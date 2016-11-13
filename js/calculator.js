@@ -1,4 +1,5 @@
 
+console.log('calculatorjs executed')
 function calculatorModule(x) {
   var memory = 0;
   var total = 0;
@@ -45,5 +46,3 @@ function calculatorModule(x) {
 }
 
 
-
-console.log(calculatorModule);
