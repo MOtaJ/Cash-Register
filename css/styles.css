@@ -1,23 +1,35 @@
 
 
 table {
-  border: 2px solid black;
-  width: 250px;
+  border: 1px solid black;
+  width: 350px;
   height: 250px;
 }
 
-#numeric {
-  text-align: center;
-  width: px;
+#calculatorSec{
+  padding-left: 10px;
 }
 
-#Display {
-  border: 2px solid black;
+
+#display {
+  border: 1px solid black;
   width: 200px;
-  height: 10px;
-  text-decoration: underline;
+  height: 20px;
+  margin-left: 5px;
+  padding-right: 10px;
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  /*text-decoration: underline;*/
 }
 
-form {
-  float: left;
+tr, td {
+  border: 1px solid black;
+  width: 20px;
+  height: 10px;
+  text-align: center;
 }
+
+
+
