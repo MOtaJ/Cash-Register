@@ -2,12 +2,21 @@
 
 // console.log('cash_register');
 var calculator = calculatorModule();
+var operator = "";
+var displayedNum = 0;
+var storedNum = 0;
 
- document.getElementById("btn1").addEventListener('click', function(){
+function clearDisplay(){
+ document.getElementById("display").innerHTML = '';
+}
+
+
+
+ document.getElementById("btn1").addEventListener('click', function(){ 
   document.getElementById("display").innerHTML += 1;
  }); 
 
- document.getElementById("btn2").addEventListener('click', function(){
+ document.getElementById("btn2").addEventListener('click', function(){ 
   document.getElementById("display").innerHTML += 2;
  }); 
 
@@ -27,7 +36,7 @@ var calculator = calculatorModule();
   document.getElementById("display").innerHTML += 6;
  }); 
 
- document.getElementById("btn7").addEventListener('click', function(){
+ document.getElementById("btn7").addEventListener('click', function(){ 
   document.getElementById("display").innerHTML += 7;
  }); 
 
@@ -35,32 +44,45 @@ var calculator = calculatorModule();
   document.getElementById("display").innerHTML += 8;
  }); 
 
- document.getElementById("btn9").addEventListener('click', function(){
+ document.getElementById("btn9").addEventListener('click', function(){ 
   document.getElementById("display").innerHTML += 9;
  }); 
 
- document.getElementById("btn0").addEventListener('click', function(){
+ document.getElementById("btn0").addEventListener('click', function(){ 
   document.getElementById("display").innerHTML += 0;
  }); 
 
- document.getElementById("btn00").addEventListener('click', function(){
+ document.getElementById("btn00").addEventListener('click', function(){ 
   document.getElementById("display").innerHTML += '00';
  }); 
 
-document.getElementById("divisionbtn").addEventListener('click', function(){
-  document.getElementById("display").innerHTML += '÷';
+document.getElementById("divisionbtn").addEventListener('click', function(){  
+  var divide = parseFloat(document.getElementById('display').innerHTML);
+  storedNum = divide;
+  clearDisplay();
+  operator = 'divide';
  }); 
 
-document.getElementById("multiplybtn").addEventListener('click', function(){
-  document.getElementById("display").innerHTML += '*';
+document.getElementById("multiplybtn").addEventListener('click', function(){ 
+  var multiply = parseFloat(document.getElementById('display').innerHTML);
+  storedNum = multiply;
+  clearDisplay();
+  operator = 'multiply';
  }); 
 
 document.getElementById("subtractbtn").addEventListener('click', function(){
-  document.getElementById("display").innerHTML += '-';
+  var subtract = parseFloat(document.getElementById('display').innerHTML);
+  storedNum = subtract;
+  clearDisplay();
+  operator = 'subtract';
  }); 
 
-document.getElementById("addbtn").addEventListener('click', function(){
-  document.getElementById("display").innerHTML += '+';
+document.getElementById("addbtn").addEventListener('click', function(){ 
+  var add = parseFloat(document.getElementById('display').innerHTML);
+
+  storedNum = add;
+  clearDisplay();
+  operator = 'add';
  }); 
 
 document.getElementById("btndec").addEventListener('click', function(){
@@ -69,7 +91,61 @@ document.getElementById("btndec").addEventListener('click', function(){
 
 document.getElementById("clear").addEventListener('click', function(){
   document.getElementById("display").innerHTML = '';
- }); 
+ });
+
+
+
+document.getElementById("btnequal").addEventListener('click', function(){ 
+    var result = '';
+    document.getElementById('display');
+    displayedNum = parseFloat(document.getElementById('display').innerHTML);
+
+    switch(operator){
+      case 'add':
+      result = calculator.add(storedNum, displayedNum);
+      break;
+
+      case 'subtract':
+      result = calculator.subtract(storedNum, displayedNum);
+      break;
+
+      case 'multiply':
+      result = calculator.multiply(storedNum, displayedNum);
+      break;
+
+      case 'divide':
+      result = calculator.divide(storedNum, displayedNum);
+      break;
+    }
+
+    document.getElementById('display').innerHTML= result;
+}); 
+
+
+
+
+/* document.getElementById("btnequal").addEventListener('click', function(){ console.log(calculator.getTotal(),calculator.getOperator());
+  document.getElementById("display").innerHTML = '=';
+ });  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  /* var display = document.getElementById('display');
 

@@ -1,46 +1,86 @@
 
 console.log('calculatorjs executed');
+
 function calculatorModule(x) {
-  var memory = 0;
-  var total = 0;
+  /* var _memory = 0;
+  var _total = 0;
+  
+  //var newTotal = 0;
 
     function load(x) {
-    total = x;
-    return total;
+    _total = x;
     }
 
-    function getTotal(x) {
-      return total;
+     function getTotal() {
+      return _total;
     }
 
-    function add(x) {
-      total = total + x;
-      return total;
+    function loadMemory(x){
+      _memory = _total;
     }
 
-    function subtract(x) {
-      total = total - x;
-      return total;
+    function getMemory(){
+      return _memory;
+
     }
 
-    function multiply(x) {
-      total = total * x;
-      return total;
+    function clearMemory(){
+      _memory= 0;
     }
 
-    function divide(x) {
-      total = total / x;
-      return total;
+   function getOperator (){
+      return operator;
     }
+
+    function loadOperator(x){
+      operator = x;
+
+    }
+
+    */
+
+    function add(x, y){
+      if(typeof x === 'number' && typeof y === 'number'){
+        return parseInt(x) + parseInt(y);
+      } else {
+        throw new Error();
+      }
+
+    }
+
+    function subtract(x,y){
+        if(typeof x === 'number' && typeof y === 'number'){
+          return parseInt(x) - parseInt(y);
+        } else {
+          throw new Error();
+        }
+      }
+
+
+    function multiply(x,y){
+       if(typeof x === 'number' && typeof y === 'number'){
+          return parseInt(x) * parseInt(y);
+        } else {
+          throw new Error();
+         }
+      }
+
+
+    function divide(x,y){
+       if(typeof x === 'number' && typeof y === 'number'){
+          return parseInt(x) / parseInt(y);
+        } else {
+          throw new Error();
+         }
+      }
+
 
 
    return {
       add: add,
       subtract: subtract,
       multiply: multiply,
-      divide: divide,
-      load: load,
-      getTotal: getTotal,
+      divide: divide
 
    };
 }
