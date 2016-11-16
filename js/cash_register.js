@@ -5,6 +5,7 @@ var calculator = calculatorModule();
 var operator = "";
 var displayedNum = 0;
 var storedNum = 0;
+var drawer = 0;
 
 function clearDisplay(){
  document.getElementById("display").innerHTML = '';
@@ -85,6 +86,21 @@ document.getElementById("addbtn").addEventListener('click', function(){
   operator = 'add';
  }); 
 
+
+document.getElementById("btndeposit").addEventListener('click', function(){ 
+  storedNum = parseFloat(document.getElementById('display').innerHTML);
+  drawer += storedNum;
+  clearDisplay();
+ }); 
+
+
+document.getElementById("btnwithdraw").addEventListener('click', function(){ 
+   storedNum = parseFloat(document.getElementById('display').innerHTML);
+ document.getElementById('display').innerHTML = drawer -= storedNum;
+  clearDisplay();
+ }); 
+
+
 document.getElementById("btndec").addEventListener('click', function(){
   document.getElementById("display").innerHTML += '.';
  }); 
@@ -92,6 +108,8 @@ document.getElementById("btndec").addEventListener('click', function(){
 document.getElementById("clear").addEventListener('click', function(){
   document.getElementById("display").innerHTML = '';
  });
+
+
 
 
 
@@ -121,7 +139,11 @@ document.getElementById("btnequal").addEventListener('click', function(){
     document.getElementById('display').innerHTML= result;
 }); 
 
-
+document.getElementById("balance").addEventListener('click', function(){
+storedNum = parseFloat(document.getElementById('display').innerHTML);
+document.getElementById('display').innerHTML= drawer;
+ 
+ }); 
 
 
 /* document.getElementById("btnequal").addEventListener('click', function(){ console.log(calculator.getTotal(),calculator.getOperator());

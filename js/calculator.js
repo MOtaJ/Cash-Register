@@ -41,7 +41,7 @@ function calculatorModule(x) {
 
     function add(x, y){
       if(typeof x === 'number' && typeof y === 'number'){
-        return parseInt(x) + parseInt(y);
+        return parseFloat(x) + parseFloat(y);
       } else {
         throw new Error();
       }
@@ -50,7 +50,7 @@ function calculatorModule(x) {
 
     function subtract(x,y){
         if(typeof x === 'number' && typeof y === 'number'){
-          return parseInt(x) - parseInt(y);
+          return parseFloat(x) - parseFloat(y);
         } else {
           throw new Error();
         }
@@ -59,7 +59,7 @@ function calculatorModule(x) {
 
     function multiply(x,y){
        if(typeof x === 'number' && typeof y === 'number'){
-          return parseInt(x) * parseInt(y);
+          return parseFloat(x) * parseFloat(y);
         } else {
           throw new Error();
          }
@@ -68,7 +68,7 @@ function calculatorModule(x) {
 
     function divide(x,y){
        if(typeof x === 'number' && typeof y === 'number'){
-          return parseInt(x) / parseInt(y);
+          return parseFloat(x) / parseFloat(y);
         } else {
           throw new Error();
          }
