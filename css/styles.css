@@ -4,6 +4,7 @@ table {
   border: 1px solid black;
   width: 350px;
   height: 250px;
+  background-color: #809CFF;
 }
 
 #calculatorSec{
@@ -20,6 +21,7 @@ table {
   text-align: right;
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: white;
 
   /*text-decoration: underline;*/
 }
@@ -29,7 +31,28 @@ tr, td {
   width: 20px;
   height: 10px;
   text-align: center;
+  background-color: white;
+
 }
+
+#calculatorHead{
+   background-color: #809CFF;
+   padding-top: 5px;
+   color: white;
+   
+}
+
+#btndeposit{
+  background-color: #4ABA81;
+  color: white;
+}
+
+#btnwithdraw{
+  background-color: #FF7E70;
+  color: white;
+}
+
+
 
 
 
