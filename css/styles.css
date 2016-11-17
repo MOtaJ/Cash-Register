@@ -4,7 +4,7 @@ table {
   border: 1px solid black;
   width: 350px;
   height: 250px;
-  background-color: #809CFF;
+  background-color: #546783;
 }
 
 #calculatorSec{
@@ -36,7 +36,7 @@ tr, td {
 }
 
 #calculatorHead{
-   background-color: #809CFF;
+   background-color: #546783;
    padding-top: 5px;
    color: white;
    
