@@ -1,6 +1,5 @@
 
 
-// console.log('cash_register');
 var calculator = calculatorModule();
 var operator = "";
 var displayedNum = 0;
@@ -146,9 +145,6 @@ document.getElementById('display').innerHTML= drawer;
  }); 
 
 
-/* document.getElementById("btnequal").addEventListener('click', function(){ console.log(calculator.getTotal(),calculator.getOperator());
-  document.getElementById("display").innerHTML = '=';
- });  */
 
 
 
@@ -169,23 +165,4 @@ document.getElementById('display').innerHTML= drawer;
 
 
 
- /* var display = document.getElementById('display');
 
- var btn2 = document.getElementById('btn2');
- btn2.addEventListener('click', function() {
-  console.log("hi");
- }); */
-
- /* btn2.addEventListener('click', function() {display.innerHTML += 2;});
- btn3.addEventListener('click', function() {display.innerHTML += 3;});
- btn4.addEventListener('click', function() {display.innerHTML += 4;});
- btn5.addEventListener('click', function() {display.innerHTML += 5;});
- btn6.addEventListener('click', function() {display.innerHTML += 6;});
- btn7.addEventListener('click', function() {display.innerHTML += 7;});
- btn8.addEventListener('click', function() {display.innerHTML += 8;});
- btn9.addEventListener('click', function() {display.innerHTML += 9;});
- btn0.addEventListener('click', function() {display.innerHTML += 0;});
- btn00.addEventListener('click', function() {display.innerHTML += 00;}); */
- 
-
- // add.addEventListener('click', add(Display)); 
